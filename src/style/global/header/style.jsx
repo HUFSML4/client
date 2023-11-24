@@ -7,14 +7,16 @@ export const BodyDiv = styled.div`
         font-family: sans-serif;
         font-weight: 500;
         text-align: center;
+        line-height: 2;
     }
 
     && p:nth-child(2){
         margin: 0;
-        font-size: 100%;
+        font-size: 90%;
         font-family: sans-serif;
         font-weight: 500;
         text-align: center;
+        line-height: 2;
     }
     && p:nth-child(2) span{
         text-decoration: underline;
