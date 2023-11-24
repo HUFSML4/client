@@ -77,6 +77,7 @@ export const BodyDiv = styled.div`
             text-align: center;
             font-size: 100%;
             font-weight: 500;
+            z-index: 1;
         }
     }
 
