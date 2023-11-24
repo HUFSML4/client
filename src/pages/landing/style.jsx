@@ -83,7 +83,8 @@ export const BodyDiv = styled.div`
         font-size: 100%;
         font-family: sans-serif;
         display: block;
-        margin: 5% auto;
+        margin: 0 auto;
+        margin-top: 5%;
         width: 50%;
         font-weight: 600;
     }
