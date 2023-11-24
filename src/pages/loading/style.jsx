@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import search from "../../assets/images/search.gif";
 export const BodyDiv = styled.div`
-    margin: 30px 0;
+    margin: 60px 0;
     && div:nth-child(1){
-        width: 120px;
-        height: 120px;
+        width: 200px;
+        height: 200px;
         margin: 0 auto;
         background-image: url(${search});
         background-position: center;
