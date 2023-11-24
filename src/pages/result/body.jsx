@@ -1,6 +1,10 @@
 import { BodyDiv } from "./style";
+import { useNavigate } from "react-router-dom";
 function Body() {
-
+    const navigate = useNavigate();
+    const handleOnClick = () => {
+        navigate(`/`);
+    }
     return(
         <BodyDiv>
             <h1>추천 영화를 찾았습니다!!</h1>
@@ -36,7 +40,7 @@ function Body() {
                     <p><span>평점 : </span>Rate</p>
                 </div>
             </section>
-            <button>다시하기</button>
+            <button onClick={handleOnClick}>다시하기</button>
         </BodyDiv>
     )
 }
