@@ -1,9 +1,8 @@
 import styled from "styled-components";
-
+import movie from "../../assets/images/movie.jpg";
 export const BodyDiv = styled.div`
-    margin: 30px auto;
+    margin: 0 auto;
     width: 90%;
-
     && h1:nth-child(1){
         margin: 0;
         font-size: 100%;
@@ -57,6 +56,22 @@ export const BodyDiv = styled.div`
         border: 2px solid navy;
         box-sizing: border-box;
         margin-bottom: 5%;
+        /* How to make background img tranparent */
+        position: relative;
+
+        &::before{
+            content: "";
+            background-image: url(${movie});
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            opacity: 0.15;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+        }
         p{
             margin: 0;
             text-align: center;
