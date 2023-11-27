@@ -8,7 +8,7 @@ function App() {
     <Router>
       <Routes>
         <Route path={`/`} element={<Landing />}></Route>
-        <Route path={`/loading/:selectedMovie`} element={<Loading />}></Route>
+        <Route path={`/loading/:movieTitle`} element={<Loading />}></Route>
         <Route path={`/result`} element={<Result />}></Route>
       </Routes>
     </Router>

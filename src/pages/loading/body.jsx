@@ -1,6 +1,12 @@
 import { BodyDiv } from "./style";
+import { useParams, useNavigate } from "react-router-dom";
+import { getRecommendMovies } from "../../apis/apis";
 function Body() {
 
+    const movieTitle = useParams().movieTitle;
+    const navigate = useNavigate();
+    getRecommendMovies(navigate, movieTitle);
+    
     return(
         <BodyDiv>
             <div></div>

@@ -14,8 +14,9 @@ export const searchMovies = async (keyword) => {
     return currMovies;
 }
 
-export const recommendMovies = async (movieTitle) => {
+export const getRecommendMovies = async (navigate, movieTitle) => {
     await serverApi.get(`/searching/recommend/${movieTitle}`).then((response) => {
-        console.log(response);
+        const recommendMovies = response.data;
+        navigate(`/result`, {state: {"recommendMovies": recommendMovies}});
     })
 }
