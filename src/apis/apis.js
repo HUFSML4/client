@@ -7,9 +7,11 @@ const serverApi = axios.create({
 });
 
 export const searchMovies = async (keyword) => {
+    let currMovies;
     await serverApi.post(`/searching`, {"text":keyword}).then((response) => {
-        console.log(response);
+        currMovies = response.data;
     })
+    return currMovies;
 }
 
 export const recommendMovies = async (movieTitle) => {

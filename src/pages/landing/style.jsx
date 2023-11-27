@@ -49,13 +49,14 @@ export const BodyDiv = styled.div`
 
     && section:nth-child(4){
         width: 100%;
-        height: 200px;
+        height: 250px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         border: 2px solid navy;
         box-sizing: border-box;
         margin-bottom: 5%;
+        overflow: scroll;
         /* How to make background img tranparent */
         position: relative;
 
@@ -71,6 +72,8 @@ export const BodyDiv = styled.div`
             left: 0px;
             right: 0px;
             bottom: 0px;
+            /* 배경화면 튀어나오기 방지 */
+            pointer-events: none;
         }
         p{
             margin: 0;
@@ -78,6 +81,12 @@ export const BodyDiv = styled.div`
             font-size: 100%;
             font-weight: 500;
             z-index: 1;
+        }
+        h3{
+            z-index: 1;
+            margin: 0;
+            line-height: 2;
+            text-align: center;
         }
     }
 
@@ -104,5 +113,7 @@ export const BodyDiv = styled.div`
         width: 50%;
         font-weight: 600;
     }
-
+    .selected{
+        color: green;
+    }
 `
