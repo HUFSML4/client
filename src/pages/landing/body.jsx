@@ -35,10 +35,8 @@ function Body() {
             alert('검색어를 설정해주세요!');
         }
         else{
-            // const currMovies = await searchMovies(keyword);
-            // setMovies(currMovies);
-            setMovies(['testMovie1', 'testMovie2', 'testmovie4', 'testMovie5', 'testMovie6', 'testMovie7', 'testMovie8', 'textMovie9', 'testMovie10']);
-            // setMovies([]);
+            const currMovies = await searchMovies(keyword);
+            setMovies(currMovies);
         }
     }
 
@@ -80,7 +78,7 @@ function Body() {
                 <span>내 인생 영화</span>를 검색해 주세요!
             </h1>
             <p>
-                <input type="text" name="" id="keywordBox" placeholder="ex) spiderman"/><button onClick={handleOnClickSearch}>검색</button>
+                <input type="text" name="" id="keywordBox" placeholder="ex) batman"/><button onClick={handleOnClickSearch}>검색</button>
             </p>
             <h1>STEP 2.<br />
                 검색 결과 중 <span>내 인생 영화</span>를 클릭해 주세요!
