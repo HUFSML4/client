@@ -10,15 +10,9 @@ function Body() {
         navigate(`/`);
     }
     
-    // temp movieList
-    const movieList = [
-        {"title":"testMovie1", "genres":"testGenre1", "rating":"testRate1"},
-        {"title":"testMovie2", "genres":"testGenre2", "rating":"testRate2"},
-        {"title":"testMovie3", "genres":"testGenre3", "rating":"testRate3"},
-        {"title":"testMovie4", "genres":"testGenre4", "rating":"testRate4"},
-        {"title":"testMovie5", "genres":"testGenre5", "rating":"testRate5"},
-        {"title":"testMovie6", "genres":"testGenre6", "rating":"testRate6"},
-    ]
+    // movieList
+    const location = useLocation();
+    const movieList = location.state.recommendMovies;
 
     // 결과 섹션 채우기
     const setResultSection = () => {

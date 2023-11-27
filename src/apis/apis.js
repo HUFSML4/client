@@ -10,7 +10,6 @@ export const searchMovies = async (keyword) => {
     let currMovies;
     await serverApi.post(`http://3.36.128.245:8000/searching/`, {"text":keyword}).then((response) => {
         currMovies = response.data.data;
-        console.log(response);
     })
     return currMovies;
 }

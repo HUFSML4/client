@@ -66,7 +66,7 @@ export const BodyDiv = styled.div`
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
-            position: absolute;
+            position: fixed;
             opacity: 0.15;
             top: 0px;
             left: 0px;
