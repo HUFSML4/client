@@ -109,7 +109,7 @@ function Body() {
                 <span>추천 유형</span>을 선택해 주세요!
             </h1>
             <p id="include" onClick={handleOnClickIncludeExclude}>감독, 출연진도 고려해서 추천받기 <span>(클릭!)</span></p>
-            <p id="exclude" onClick={handleOnClickIncludeExclude}>감독, 출연진을 제외하고 내용 위주로 추천받기 <span>(클릭!)</span></p>
+            <p id="exclude" onClick={handleOnClickIncludeExclude}>내용 위주로만 추천받기 <span>(클릭!)</span></p>
             <h1>STEP 4.<br />
                 <span>"비슷한 영화 찾기"</span> 버튼을 클릭해 주세요!
             </h1>

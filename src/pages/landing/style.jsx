@@ -109,6 +109,7 @@ export const BodyDiv = styled.div`
         text-align: center;
         line-height: 3;
         font-weight: 600;
+        font-size: 95%;
         span{
             text-decoration: underline;
             color: red;
@@ -119,6 +120,7 @@ export const BodyDiv = styled.div`
         margin: 0;
         line-height: 3;
         font-weight: 600;
+        font-size: 95%;
         span{
             text-decoration: underline;
             color: red;
