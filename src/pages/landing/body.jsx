@@ -89,7 +89,7 @@ function Body() {
             alert('추천 유형을 선택해 주세요!');
         }
         else{
-            navigate(`/loading/${selectedMovie}`);
+            navigate(`/loading/${selectedMovie}`, {state:{"type":recommendType}});
         }
     }
 

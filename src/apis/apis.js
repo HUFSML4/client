@@ -14,7 +14,7 @@ export const searchMovies = async (keyword) => {
     return currMovies;
 }
 
-export const getRecommendMovies = async (navigate, movieTitle) => {
+export const getRecommendMovies = async (navigate, movieTitle, recommendType) => {
     await serverApi.get(`https://port-0-hufsml-1gksli2alpnlcd7w.sel4.cloudtype.app/searching/recommend/${movieTitle}/`).then((response) => {
         const recommendMovies = response.data.data;
         navigate(`/result`, {state: {"recommendMovies": recommendMovies}});
