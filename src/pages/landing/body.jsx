@@ -75,7 +75,7 @@ function Body() {
     return(
         <BodyDiv>
             <h1>STEP 1.<br />
-                <span>내 인생 영화</span>를 검색해 주세요!
+                <span>내 인생 영화</span>를 검색해 주세요! (키워드 검색)
             </h1>
             <p>
                 <input type="text" name="" id="keywordBox" placeholder="ex) batman"/><button onClick={handleOnClickSearch}>검색</button>

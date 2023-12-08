@@ -16,9 +16,10 @@ export const BodyDiv = styled.div`
     && p:nth-child(2){
         margin: 0;
         margin-bottom: 5%;
+        text-align: center;
 
         input{
-            width: 85%;
+            width: 80%;
             padding: 0;
             font-size: 100%;
             border: 2px solid navy;
@@ -34,6 +35,9 @@ export const BodyDiv = styled.div`
             line-height: 2;
             border-radius: 10px;
             background-color: #fff;
+            border: 2px solid #000;
+            margin-left: 1%;
+            box-sizing: border-box;
         }
     }
 
