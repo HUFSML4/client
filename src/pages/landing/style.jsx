@@ -103,17 +103,48 @@ export const BodyDiv = styled.div`
             color: navy;
         }
     }
-    && button:nth-child(6){
+
+    && p:nth-child(6){
+        margin: 0;
+        text-align: center;
+        line-height: 3;
+        font-weight: 600;
+        span{
+            text-decoration: underline;
+            color: red;
+        }
+    }
+    && p:nth-child(7){
+        text-align: center;
+        margin: 0;
+        line-height: 3;
+        font-weight: 600;
+        span{
+            text-decoration: underline;
+            color: red;
+        }
+    }
+
+    && h1:nth-child(8){
+        margin: 0;
+        font-size: 100%;
+        font-weight: 600;
+        line-height: 1.5;
+        span{
+            color: navy;
+        }
+    }
+
+    && button:nth-child(9){
         background-color: #fff;
         border: 2px solid navy;
         border-radius: 10px;
         box-sizing: border-box;
-        line-height: 2;
+        line-height: 2.5;
         font-size: 100%;
         font-family: sans-serif;
         display: block;
-        margin: 0 auto;
-        margin-top: 5%;
+        margin: 5% auto;
         width: 50%;
         font-weight: 600;
     }

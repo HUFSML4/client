@@ -60,12 +60,33 @@ function Body() {
         }
     }
 
+    // 추천 유형 선택
+    const [recommendType, setRecommendType] = useState('');
+    const handleOnClickIncludeExclude = (e) => {
+        const selectedType = e.target.id;
+        const includeP = document.getElementById('include');
+        const excludeP = document.getElementById('exclude');
+        
+        if (selectedType === 'include'){
+            includeP.style.color = `navy`;
+            excludeP.style.color = `#000`;
+        }
+        else if(selectedType === 'exclude'){
+            includeP.style.color = `#000`;
+            excludeP.style.color = `navy`;
+        }
+        setRecommendType(selectedType);
+    }
+
     // 비슷한 영화 찾기 클릭 시
     const [selectedMovie, setSelectedMovie] = useState('');
     const navigate = useNavigate();
     const handleOnClickFind = () => {
         if (selectedMovie === '') {
             alert('선택된 영화가 없어요!');
+        }
+        else if(recommendType === ''){
+            alert('추천 유형을 선택해 주세요!');
         }
         else{
             navigate(`/loading/${selectedMovie}`);
@@ -85,6 +106,11 @@ function Body() {
             </h1>
             <section id="searchResultSection" onClick={handleOnClickSearchResultSection}></section>
             <h1>STEP 3.<br />
+                <span>추천 유형</span>을 선택해 주세요!
+            </h1>
+            <p id="include" onClick={handleOnClickIncludeExclude}>감독, 출연진도 고려해서 추천받기 <span>(클릭!)</span></p>
+            <p id="exclude" onClick={handleOnClickIncludeExclude}>감독, 출연진을 제외하고 내용 위주로 추천받기 <span>(클릭!)</span></p>
+            <h1>STEP 4.<br />
                 <span>"비슷한 영화 찾기"</span> 버튼을 클릭해 주세요!
             </h1>
             <button onClick={handleOnClickFind}>비슷한 영화 찾기</button>
