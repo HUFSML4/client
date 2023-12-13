@@ -11,7 +11,7 @@ export const BodyDiv = styled.div`
     && section:nth-child(2){
         border: 2px solid navy;
         width: 90%;
-        height: 250px;
+        height: 280px;
         margin: 0 auto;
         padding: 10px;
         box-sizing: border-box;
