@@ -1,6 +1,6 @@
 import { BodyDiv } from "./style";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { searchMovies } from "../../apis/apis";
 function Body() {
 
@@ -97,6 +97,19 @@ function Body() {
         }
     }
 
+    // 비슷한 영화 찾기 버튼 활성화
+    const activateBtn = () => {
+        const searchBtn = document.getElementById('searchBtn');
+        
+        if (selectedMovie.length >= 1 && recommendType.length >= 1){
+            searchBtn.classList.add('activated');
+        }
+    }
+
+    useEffect(() => {
+        activateBtn();
+    }, [selectedMovie, recommendType])
+
     return(
         <BodyDiv>
             <h1>STEP 1.<br />
@@ -117,7 +130,7 @@ function Body() {
             <h1>STEP 4.<br />
                 <span>"비슷한 영화 찾기"</span> 버튼을 클릭해 주세요!
             </h1>
-            <button onClick={handleOnClickFind}>비슷한 영화 찾기</button>
+            <button id="searchBtn" onClick={handleOnClickFind}>비슷한 영화 찾기</button>
         </BodyDiv>
     )
 }

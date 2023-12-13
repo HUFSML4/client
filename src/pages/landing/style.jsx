@@ -149,8 +149,18 @@ export const BodyDiv = styled.div`
         margin: 5% auto;
         width: 50%;
         font-weight: 600;
+        transition: all 0.7s;
     }
+    
     .selected{
         color: green;
     }
+
+    .activated {
+        color: navy;
+        background-color: green !important;
+        border: 2px solid navy !important;
+        box-sizing: border-box;
+    }
+    
 `
