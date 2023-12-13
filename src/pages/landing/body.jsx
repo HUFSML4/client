@@ -68,12 +68,16 @@ function Body() {
         const excludeP = document.getElementById('exclude');
         
         if (selectedType === 'include'){
-            includeP.style.color = `navy`;
+            includeP.style.color = `green`;
+            includeP.style.fontSize = '110%';
             excludeP.style.color = `#000`;
+            excludeP.style.fontSize = '95%';
         }
         else if(selectedType === 'exclude'){
             includeP.style.color = `#000`;
-            excludeP.style.color = `navy`;
+            includeP.style.fontSize = '95%';
+            excludeP.style.color = `green`;
+            excludeP.style.fontSize = '110%';
         }
         setRecommendType(selectedType);
     }
